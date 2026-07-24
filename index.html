@@ -161,13 +161,13 @@
 
                             <!-- Video Selector Buttons -->
                             <div class="grid grid-cols-3 gap-2 pt-1">
-                                <button onclick="switchVideo('app1-player', 'C_bKkLAaQGw', this)" class="app1-tab px-3 py-2 text-xs font-semibold rounded-lg bg-brand-600 text-slate-950 border border-brand-500 transition text-center truncate shadow-sm">
+                                <button onclick="switchVideo('app1-player', 'C_bKkLAaQGw', this, 'app1-tab', 'bg-brand-600 text-slate-950 border-brand-500')" class="app1-tab px-3 py-2 text-xs font-semibold rounded-lg bg-brand-600 text-slate-950 border border-brand-500 transition text-center truncate shadow-sm">
                                     <i class="fa-solid fa-play text-[10px] mr-1"></i> Mobile App Demo
                                 </button>
-                                <button onclick="switchVideo('app1-player', 'U9dhT_ZDDY0', this)" class="app1-tab px-3 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700 transition text-center truncate">
+                                <button onclick="switchVideo('app1-player', 'U9dhT_ZDDY0', this, 'app1-tab', 'bg-brand-600 text-slate-950 border-brand-500')" class="app1-tab px-3 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700 transition text-center truncate">
                                     <i class="fa-solid fa-play text-[10px] mr-1"></i> Coach's Dashboard
                                 </button>
-                                <button onclick="switchVideo('app1-player', 'yZrRqSEUv7g', this)" class="app1-tab px-3 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700 transition text-center truncate">
+                                <button onclick="switchVideo('app1-player', 'yZrRqSEUv7g', this, 'app1-tab', 'bg-brand-600 text-slate-950 border-brand-500')" class="app1-tab px-3 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700 transition text-center truncate">
                                     <i class="fa-solid fa-play text-[10px] mr-1"></i> Performance Tracker
                                 </button>
                             </div>
@@ -222,16 +222,27 @@
                             </div>
                         </div>
 
-                        <!-- Video Demo Column -->
-                        <div class="lg:col-span-6 lg:order-1">
+                        <!-- 2-Video Tabbed Showcase Column -->
+                        <div class="lg:col-span-6 lg:order-1 space-y-3">
                             <div class="relative w-full aspect-video rounded-xl overflow-hidden border border-slate-700/60 bg-slate-950 shadow-xl">
                                 <iframe 
+                                    id="app2-player"
                                     class="w-full h-full border-0" 
-                                    src="https://www.youtube-nocookie.com/embed/VIDEO_ID_2?rel=0" 
-                                    title="Diamond Flow Pro Demo Video" 
+                                    src="https://www.youtube-nocookie.com/embed/HiKwyeMU0FE?rel=0" 
+                                    title="Diamond Flow Pro Video 1" 
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                     allowfullscreen>
                                 </iframe>
+                            </div>
+
+                            <!-- Video Selector Buttons -->
+                            <div class="grid grid-cols-2 gap-2 pt-1">
+                                <button onclick="switchVideo('app2-player', 'HiKwyeMU0FE', this, 'app2-tab', 'bg-teal-500 text-slate-950 border-teal-400')" class="app2-tab px-3 py-2 text-xs font-semibold rounded-lg bg-teal-500 text-slate-950 border border-teal-400 transition text-center truncate shadow-sm">
+                                    <i class="fa-solid fa-play text-[10px] mr-1"></i> Overview Demo
+                                </button>
+                                <button onclick="switchVideo('app2-player', 'bPNCtgBPJjQ', this, 'app2-tab', 'bg-teal-500 text-slate-950 border-teal-400')" class="app2-tab px-3 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700 transition text-center truncate">
+                                    <i class="fa-solid fa-play text-[10px] mr-1"></i> Features Walkthrough
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -332,20 +343,22 @@
         </div>
     </footer>
 
-    <!-- Video Switching Script -->
+    <!-- Universal Video Switching Script -->
     <script>
-        function switchVideo(playerId, videoId, btnElement) {
+        function switchVideo(playerId, videoId, btnElement, tabClass, activeClasses) {
             const player = document.getElementById(playerId);
             if (player) {
                 player.src = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&autoplay=1`;
             }
 
-            const buttons = document.querySelectorAll('.app1-tab');
+            // Reset all buttons in this card group
+            const buttons = document.querySelectorAll(`.${tabClass}`);
             buttons.forEach(btn => {
-                btn.className = 'app1-tab px-3 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700 transition text-center truncate';
+                btn.className = `${tabClass} px-3 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700 transition text-center truncate`;
             });
 
-            btnElement.className = 'app1-tab px-3 py-2 text-xs font-semibold rounded-lg bg-brand-600 text-slate-950 border border-brand-500 transition text-center truncate shadow-sm';
+            // Set active styles on clicked button
+            btnElement.className = `${tabClass} px-3 py-2 text-xs font-semibold rounded-lg ${activeClasses} transition text-center truncate shadow-sm`;
         }
     </script>
 
