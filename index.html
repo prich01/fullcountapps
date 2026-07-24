@@ -98,79 +98,82 @@
             <!-- Apps List Grid / Stack -->
             <div class="space-y-16">
 
-                <!-- APP CARD 1 (WITH TABBED VIDEO PLAYER FOR 3 VIDEOS) -->
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xl transition hover:border-slate-700/80">
-                    <div class="grid lg:grid-cols-12 gap-8 items-center">
-                        <!-- App Info Column -->
-                        <div class="lg:col-span-6 space-y-5">
-                            <div class="flex items-center space-x-4">
-                                <div class="w-14 h-14 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-brand-500 text-2xl font-bold shadow-md">
-                                    <i class="fa-solid fa-rocket"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-2xl font-bold text-white">Athletic Hub</h3>
-                                    <span class="text-xs font-semibold text-brand-500 bg-brand-500/10 px-2.5 py-0.5 rounded-full border border-brand-500/20">Available Now</span>
-                                </div>
-                            </div>
-
-                            <p class="text-slate-300 leading-relaxed">
-                                Provide a compelling 2–3 sentence overview of App #1 here. Describe the primary problem it solves and why users will love using it every day.
-                            </p>
-
-                            <!-- Key Feature Bullets -->
-                            <ul class="space-y-2.5 text-sm text-slate-400 pt-2">
-                                <li class="flex items-center gap-2.5">
-                                    <i class="fa-solid fa-circle-check text-brand-500 text-base"></i>
-                                    <span>Key benefit or feature description point one</span>
-                                </li>
-                                <li class="flex items-center gap-2.5">
-                                    <i class="fa-solid fa-circle-check text-brand-500 text-base"></i>
-                                    <span>Fast, intuitive user interface with zero learning curve</span>
-                                </li>
-                                <li class="flex items-center gap-2.5">
-                                    <i class="fa-solid fa-circle-check text-brand-500 text-base"></i>
-                                    <span>Lifetime access & free updates included</span>
-                                </li>
-                            </ul>
-
-                            <!-- CTA Buttons -->
-                            <div class="pt-4 flex flex-wrap items-center gap-4">
-                                <a href="https://gumroad.com" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-slate-950 font-bold transition shadow-md flex items-center gap-2">
-                                    <span>Get on Gumroad</span>
-                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- 3-Video Tabbed Showcase Column -->
-                        <div class="lg:col-span-6 space-y-3">
-                            <div class="relative w-full aspect-video rounded-xl overflow-hidden border border-slate-700/60 bg-slate-950 shadow-xl">
-                                <iframe 
-                                    id="app1-player"
-                                    class="w-full h-full border-0" 
-                                    src="https://www.youtube-nocookie.com/embed/VIDEO_ID_1_A?rel=0" 
-                                    title="App One Demo Video" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                    allowfullscreen>
-                                </iframe>
-                            </div>
-
-                            <!-- Video Selector Buttons -->
-                            <div class="grid grid-cols-3 gap-2 pt-1">
-                                <button onclick="switchVideo('app1-player', 'VIDEO_ID_1_A', this)" class="app1-tab px-3 py-2 text-xs font-semibold rounded-lg bg-brand-600 text-slate-950 border border-brand-500 transition text-center truncate shadow-sm">
-                                    <i class="fa-solid fa-play text-[10px] mr-1"></i> Mobile App
-                                </button>
-                                <button onclick="switchVideo('app1-player', 'VIDEO_ID_1_B', this)" class="app1-tab px-3 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700 transition text-center truncate">
-                                    <i class="fa-solid fa-play text-[10px] mr-1"></i> Coach's Dashboard
-                                </button>
-                                <button onclick="switchVideo('app1-player', 'VIDEO_ID_1_C', this)" class="app1-tab px-3 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700 transition text-center truncate">
-                                    <i class="fa-solid fa-play text-[10px] mr-1"></i> Performance Tracker
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <!-- APP CARD 1: ATHLETIC HUB -->
+<div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xl transition hover:border-slate-700/80">
+    <div class="grid lg:grid-cols-12 gap-8 items-center">
+        <!-- App Info Column -->
+        <div class="lg:col-span-6 space-y-5">
+            <div class="flex items-center space-x-4">
+                <div class="w-14 h-14 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-brand-500 text-2xl font-bold shadow-md">
+                    <i class="fa-solid fa-dumbbell"></i>
                 </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-white">Athletic Hub</h3>
+                    <span class="text-xs font-semibold text-brand-500 bg-brand-500/10 px-2.5 py-0.5 rounded-full border border-brand-500/20">Available Now</span>
+                </div>
+            </div>
 
+            <p class="text-slate-300 leading-relaxed">
+                Ditch the clipboards and binders. Athletic Hub is the simple, real-time solution that connects your Google Sheets programming directly to your athletes' phones and your weight room TV display. It gives you the power of professional sports software without the complex setup.
+            </p>
+
+            <!-- Key Feature Bullets -->
+            <ul class="space-y-2.5 text-sm text-slate-400 pt-2">
+                <li class="flex items-center gap-2.5">
+                    <i class="fa-solid fa-circle-check text-brand-500 text-base"></i>
+                    <span>Live weight room leaderboard to drive competitive energy</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                    <i class="fa-solid fa-circle-check text-brand-500 text-base"></i>
+                    <span>Fast, intuitive user interface with zero learning curve</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                    <i class="fa-solid fa-circle-check text-brand-500 text-base"></i>
+                    <span>Quickly print custom athlete reports </span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                    <i class="fa-solid fa-circle-check text-brand-500 text-base"></i>
+                    <span>Lifetime access </span>
+                </li>
+            </ul>
+
+            <!-- CTA Buttons -->
+            <div class="pt-4 flex flex-wrap items-center gap-4">
+                <a href="https://gumroad.com" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-slate-950 font-bold transition shadow-md flex items-center gap-2">
+                    <span>Get on Gumroad</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- 3-Video Tabbed Showcase Column -->
+        <div class="lg:col-span-6 space-y-3">
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden border border-slate-700/60 bg-slate-950 shadow-xl">
+                <iframe 
+                    id="app1-player"
+                    class="w-full h-full border-0" 
+                    src="https://www.youtube-nocookie.com/embed/VIDEO_ID_1_A?rel=0" 
+                    title="Athletic Hub Demo Video" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Video Selector Buttons -->
+            <div class="grid grid-cols-3 gap-2 pt-1">
+                <button onclick="switchVideo('app1-player', 'VIDEO_ID_1_A', this)" class="app1-tab px-3 py-2 text-xs font-semibold rounded-lg bg-brand-600 text-slate-950 border border-brand-500 transition text-center truncate shadow-sm">
+                    <i class="fa-solid fa-play text-[10px] mr-1"></i> Phone App Demo
+                </button>
+                <button onclick="switchVideo('app1-player', 'VIDEO_ID_1_B', this)" class="app1-tab px-3 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700 transition text-center truncate">
+                    <i class="fa-solid fa-play text-[10px] mr-1"></i> TV Leaderboard
+                </button>
+                <button onclick="switchVideo('app1-player', 'VIDEO_ID_1_C', this)" class="app1-tab px-3 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700 transition text-center truncate">
+                    <i class="fa-solid fa-play text-[10px] mr-1"></i> Google Sheets Setup
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
                 <!-- APP CARD 2 -->
                 <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xl transition hover:border-slate-700/80">
